@@ -11,8 +11,8 @@ const server = http.createServer((req, res) => {
 
 var mainRouter = require('./routes/mainRouter');
 app.use('/main', mainRouter);
-//const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
