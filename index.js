@@ -13,6 +13,6 @@ var mainRouter = require('./routes/mainRouter');
 app.use('/main', mainRouter);
 //const PORT = process.env.PORT || 8081;
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
