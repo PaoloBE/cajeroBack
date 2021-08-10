@@ -10,7 +10,6 @@ const server = http.createServer((req, res) => {
 });
 
 var mainRouter = require('./routes/mainRouter');
-app.use('/main', mainRouter);
 
 function myCors(req, res, nxt) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -25,6 +24,7 @@ function myCors(req, res, nxt) {
 }
 
 app.use(myCors);
+app.use('/main', mainRouter);
 
 const PORT = process.env.PORT || 3000;
 
